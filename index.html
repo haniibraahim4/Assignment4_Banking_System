@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Account Form</title>
+
+</head>
+<body>
+<div class="container">
+  <h1>Banking Account Form</h1>
+  <p class="note">Practice system only — fictional customer information.</p>
+  <form action="process.php" method="POST" enctype="multipart/form-data">
+    <br>
+    <label>Customer Full Name</label>
+    <input type="text" name="customer_name" required>
+<br>
+    <label>Account Number</label>
+    <input type="text" name="account_number" required>
+<br>
+    <label>Gender</label>
+    <div class="choices">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+    </div>
+<br>
+    <label>Account Type</label>
+    <select name="account_type" required>
+      <option value="">-- Select Account --</option>
+      <option value="Savings">Savings</option>
+      <option value="Current">Current</option>
+      <option value="Business">Business</option>
+    </select>
+<br>
+    <label>Opening Balance ($)</label>
+    <input type="number" name="opening_balance" min="0" step="0.01" required>
+<br>
+    <label>Transaction Type</label>
+    <div class="choices">
+      <label><input type="radio" name="transaction_type" value="Deposit" required> Deposit</label>
+      <label><input type="radio" name="transaction_type" value="Withdrawal"> Withdrawal</label>
+    </div>
+<br>
+    <label>Transaction Amount ($)</label>
+    <input type="number" name="transaction_amount" min="0.01" step="0.01" required>
+<br>
+    <label>Account Duration (Years)</label>
+    <input type="number" name="duration" min="0" step="1" required>
+<br>
+    <label>Identification Document (maximum 2 MB)</label>
+    <input type="file" name="identification" required>
+<br>
+    <div class="buttons">
+      <button type="submit">Process Transaction</button>
+      <button type="reset" class="reset">Reset</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
